@@ -11,7 +11,11 @@ const averages = students.map((student) => {
     total += student.grades[i];
   }
   let avg = total / student.grades.length;
-  return avg;
+  return {
+    Name: student.name,
+    Average: avg,
+    Result: avg < 50 ? "Kaldı" : "Geçti",
+  };
 });
 
 console.log(averages);
