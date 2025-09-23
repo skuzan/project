@@ -1,8 +1,8 @@
 let students = [
-  { name: "Ali", lessons: ["Math", "Science"], grades: [80, 90] },
-  { name: "Emre", lessons: ["Math", "Science"], grades: [70, 80] },
-  { name: "Hasan", lessons: ["Math", "Science"], grades: [40, 50] },
-  { name: "Selma", lessons: ["Math", "Science"], grades: [50, 90] },
+  { name: "Alex", lessons: ["Math", "Science"], grades: [80, 90] },
+  { name: "John", lessons: ["Math", "Science"], grades: [70, 80] },
+  { name: "Jerry", lessons: ["Math", "Science"], grades: [40, 50] },
+  { name: "Tom", lessons: ["Math", "Science"], grades: [50, 90] },
 ];
 
 const averages = students.map((student) => {
