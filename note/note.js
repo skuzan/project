@@ -11,7 +11,7 @@ const averages = students.map((student) => {
     total += student.grades[i];
   }
   let avg = total / student.grades.length;
-  return avg;
+  return { name: student.name, average: avg };  // bu sekilde name i de return ederek ortalamayla birlikte görebiliriz
 });
 
 console.log(averages);
