@@ -14,8 +14,28 @@ const averages = students.map((student) => {
   return {
     Name: student.name,
     Average: avg,
-    Result: avg < 50 ? "Kaldı" : "Geçti",
+    // Result: avg < 50 ? "Kaldı" : "Geçti",
   };
 });
 
 console.log(averages);
+
+const passedStudent = (averages) => {
+  return averages.map((student) => {
+    let result = "";
+
+    if (student.Average < 50) {
+      result = "Kaldı";
+    } else {
+      result = "Geçti";
+    }
+
+    return {
+      Name: student.Name,
+      Result: result,
+    };
+  });
+};
+
+const results = passedStudent(averages);
+console.log(results);
