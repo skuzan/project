@@ -61,6 +61,7 @@ const checkInAttendee = (list) => {
   const checkInAttendeeFalse = list.filter(
     (ticket) => ticket.checkedIn === false
   );
+
   checkInAttendeeFalse.forEach((element) => {
     element.checkedIn = true;
   });
@@ -68,3 +69,15 @@ const checkInAttendee = (list) => {
 };
 
 console.log(checkInAttendee(attendees));
+
+//----------------------------------------
+// ? 6- countCheckedIn(attendees)
+//----------------------------------------
+
+const countCheckedIn = (summ) => {
+  let counter = 0;
+  summ.reduce((summe) => summ.name !== null && counter++);
+  return counter;
+};
+
+console.log("Giriş yapan kişi sayısı :", countCheckedIn(attendees));
