@@ -5,6 +5,10 @@ let attendees = [
   { name: "Emily", age: 28, ticketType: "Regular", checkedIn: true },
 ];
 
+//----------------------------------------
+// ?  function addAttendee(attendees)
+//----------------------------------------
+
 const addAttendee = (name, age, ticketType, checkedIn) => {
   attendees.push({
     name: name,
@@ -15,5 +19,36 @@ const addAttendee = (name, age, ticketType, checkedIn) => {
 };
 
 addAttendee("Sinan", 40, "VIP", true);
-
 console.log(attendees);
+
+//----------------------------------------
+// ?function removeAttendee(attendees)
+//----------------------------------------
+
+const removeAttendee = (attendees, name, ticketType) => {
+  return attendees.filter((item) => {
+    return !(item.name === name && item.ticketType === ticketType);
+  });
+};
+
+console.log(removeAttendee(attendees, "John", "VIP"));
+
+//----------------------------------------
+// ? function listByTicketType(attendees)
+//----------------------------------------
+
+const listByTicketTypeVIP = (list) => {
+  return list.filter((ticket) => ticket.ticketType === "VIP");
+};
+
+console.log(listByTicketTypeVIP(attendees));
+
+//----------------------------------------
+// ? function listByTicketType(attendees)
+//----------------------------------------
+
+const listByTicketTypeRegular = (list) => {
+  return list.filter((ticket) => ticket.ticketType === "Regular");
+};
+
+console.log(listByTicketTypeRegular(attendees));
