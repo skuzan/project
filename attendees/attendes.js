@@ -75,9 +75,10 @@ console.log(checkInAttendee(attendees));
 //----------------------------------------
 
 const countCheckedIn = (summ) => {
-  let counter = 0;
-  summ.reduce((summe) => summ.name !== null && counter++);
-  return counter;
+  const countCheckedInSumme = summ.reduce((acc, val) => {
+    return val.checkedIn ? acc + 1 : counter;
+  }, 0);
+  return countCheckedInSumme;
 };
 
 console.log("Giriş yapan kişi sayısı :", countCheckedIn(attendees));
