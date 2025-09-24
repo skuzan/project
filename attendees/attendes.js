@@ -6,7 +6,7 @@ let attendees = [
 ];
 
 //----------------------------------------
-// ?  function addAttendee(attendees)
+// ?  1- function addAttendee(attendees)
 //----------------------------------------
 
 const addAttendee = (name, age, ticketType, checkedIn) => {
@@ -22,7 +22,7 @@ addAttendee("Sinan", 40, "VIP", true);
 console.log(attendees);
 
 //----------------------------------------
-// ?function removeAttendee(attendees)
+// ? 2- function removeAttendee(attendees)
 //----------------------------------------
 
 const removeAttendee = (attendees, name, ticketType) => {
@@ -34,7 +34,7 @@ const removeAttendee = (attendees, name, ticketType) => {
 console.log(removeAttendee(attendees, "John", "VIP"));
 
 //----------------------------------------
-// ? function listByTicketType(attendees)
+// ? 3- function listByTicketType(attendees)
 //----------------------------------------
 
 const listByTicketTypeVIP = (list) => {
@@ -44,7 +44,7 @@ const listByTicketTypeVIP = (list) => {
 console.log(listByTicketTypeVIP(attendees));
 
 //----------------------------------------
-// ? function listByTicketType(attendees)
+// ? 4- function listByTicketType(attendees)
 //----------------------------------------
 
 const listByTicketTypeRegular = (list) => {
@@ -52,3 +52,19 @@ const listByTicketTypeRegular = (list) => {
 };
 
 console.log(listByTicketTypeRegular(attendees));
+
+//----------------------------------------
+// ? 5- function checkInAttendee(attendees)
+//----------------------------------------
+
+const checkInAttendee = (list) => {
+  const checkInAttendeeFalse = list.filter(
+    (ticket) => ticket.checkedIn === false
+  );
+  checkInAttendeeFalse.forEach((element) => {
+    element.checkedIn = true;
+  });
+  return checkInAttendeeFalse;
+};
+
+console.log(checkInAttendee(attendees));
