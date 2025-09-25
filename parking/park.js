@@ -28,16 +28,37 @@ console.log(vehicles); */
 // ?  2-function toggleVehicleStatus(vehicles)
 //----------------------------------------
 
-const toggleVehicleStatus = (list) => {
-  const toggleStatus = list.find((item) => item.plate === plate);
+// const toggleVehicleStatus = (list, plate) => {
+//   const toggleStatus = list.find((item) => item.plate === plate);
 
-  if (toggleStatus.inPark === true) {
-    console.log("Araç otoparkta");
-  } else {
-    console.log("Araç otoparkta değil");
-  }
+//   if (!toggleStatus) {
+//     console.log("Araç bulunamadı!");
+//     return;
+//   }
+
+//   if (toggleStatus.inPark === true) {
+//     console.log(`${plate} plakalı araç otoparkta ✅`);
+//   } else {
+//     console.log(`${plate} plakalı araç otoparkta değil ❌`);
+//   }
+// };
+
+// let plate = prompt("Araç plakasını giriniz");
+
+// toggleVehicleStatus(vehicles, plate);
+
+//----------------------------------------
+// ?  3-listVehiclesInPark(vehicles)
+//----------------------------------------
+
+const listVehiclesInPark = (list) => {
+  let result = [];
+  list.forEach((vehicle) => {
+    if (vehicle.inPark === true) {
+      result.push(vehicle);
+    }
+  });
+  return result;
 };
 
-let plate = prompt("Araç plakasını giriniz");
-
-toggleVehicleStatus(vehicles);
+console.log(listVehiclesInPark(vehicles));
