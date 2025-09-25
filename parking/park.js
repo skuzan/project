@@ -9,7 +9,7 @@ let vehicles = [
 // ?  1-function addVehicle(vehicles)
 //----------------------------------------
 
-const addVehicle = (plate, brand) => {
+/* const addVehicle = (plate, brand) => {
   vehicles.push({
     plate: plate,
     brand: brand,
@@ -22,4 +22,22 @@ let brand = prompt("Araç markasını giriniz");
 
 addVehicle(plate, brand);
 
-console.log(vehicles);
+console.log(vehicles); */
+
+//----------------------------------------
+// ?  2-function toggleVehicleStatus(vehicles)
+//----------------------------------------
+
+const toggleVehicleStatus = (list) => {
+  const toggleStatus = list.find((item) => item.plate === plate);
+
+  if (toggleStatus.inPark === true) {
+    console.log("Araç otoparkta");
+  } else {
+    console.log("Araç otoparkta değil");
+  }
+};
+
+let plate = prompt("Araç plakasını giriniz");
+
+toggleVehicleStatus(vehicles);
