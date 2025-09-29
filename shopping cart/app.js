@@ -9,8 +9,8 @@ let products = [
 //--------------------------
 
 // let productName = prompt("Ürün adını giriniz");
-// let price = prompt("fiyat giriniz");
-// let piece = prompt("adet giriniz");
+// let price = Number(prompt("fiyat giriniz"));
+// let piece = Number (prompt("adet giriniz"));
 
 // const addCart = (arr) => {
 //   arr.push({
@@ -29,7 +29,7 @@ let products = [
 // const listProducts = (arr) => {
 //   console.log("Ürün Listesi");
 //   console.log("--------------");
-//   products.forEach((item) => {
+//   arr.forEach((item) => {
 //     console.log(
 //       `Ürün :${item.name} , Fiyat: ${item.price} , ${item.piece} adet `
 //     );
